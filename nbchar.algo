@@ -1,0 +1,28 @@
+ALGORITHM nb_char
+VAR
+  ch:STRING
+  i,j,k,p,x:INTEGER
+BEGIN
+        write("write a sentence");
+        IF (ch[length(ch)]=".") THEN
+           write ("its a right sentence");
+     ELSE (ch="" or length(ch)=! ".") THEN 
+       write ("rewrite another sentence")
+       END_IF
+    x:=length(ch)-1;
+       write(x);
+FOR i FROM 1 TO x STEP 1  DO
+   k:=1
+    IF (ch[i]=" ") THEN
+        k=k+1
+    END_IF
+    write (k)
+END_FOR
+FOR j FROM 1 TO x STEP 1  DO 
+ p:=0
+IF (ch[i] in ["a","e","i","j","o","u","y"]) THEN
+    p=p+1
+END_IF
+END_FOR
+write (p) 
+END
